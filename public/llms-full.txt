@@ -1,0 +1,488 @@
+# Stendly
+
+> Stendly is a non-custodial crypto wallet and USDC payment gateway on Solana. It provides a personal wallet, a business payment gateway, and SDK/API documentation for Python, Node.js, .NET, and raw HTTP integrations.
+
+This document combines the main public text context from the current Stendly website and documentation into a single Markdown document for AI agents. It is based on the existing marketing site, Docusaurus documentation, SDK documentation, and public support/legal text in this repository.
+
+## Project Summary
+
+Stendly is a non-custodial payment gateway built on the Solana blockchain. It enables merchants to accept USDC payments directly from customers without Stendly holding or controlling user funds.
+
+Stendly is also presented as a personal wallet for digital dollars. The personal wallet lets users spend, send, receive, and pay globally with USDC on Solana. The product emphasizes no seed phrases, no network-fee complexity for users, PIN-based protection, and compatibility with Solana wallets and exchanges such as Phantom, Solflare, Binance, and Bybit.
+
+For businesses, Stendly is positioned as a crypto payment gateway for digital commerce. It accepts USDC payments, offers 0% merchant fees, zero chargeback risk, rapid Solana settlement, payment intents, terminal support, merchant dashboards, webhooks, and SDKs.
+
+## Public Website
+
+### Personal Wallet
+
+Stendly describes the personal product as crypto for everyone: spend smartly, send globally, and hold digital dollars securely. The website states that users do not need seed phrases or network-fee handling.
+
+Main personal-wallet capabilities:
+
+- Send, receive, and pay instantly.
+- Use Solana speed with a web2-style experience.
+- Pay a small USDC fee rather than holding SOL for gas.
+- Use PIN-based wallet protection.
+- Avoid seed phrases stored in plain text.
+- Retain non-custodial ownership of keys.
+- Receive funds from Solana wallets or exchanges.
+- Detect incoming funds automatically in seconds.
+
+The personal wallet page links users to the hosted web app at `https://app.stendly.com`.
+
+### Business Gateway
+
+Stendly describes the business product as a global standard for crypto payments. The business page says merchants can recover revenue from users without working credit cards by accepting instant USDC payments with zero chargebacks and 0% merchant fees.
+
+Business gateway claims and capabilities:
+
+- 0% merchant fees.
+- Sub-5 second settlement on Solana.
+- Flat user-facing gas fee of `$0.02` in USDC.
+- Underlying Solana network fee abstracted through relayer infrastructure.
+- Direct non-custodial settlement to the merchant's Solana address.
+- One API for Telegram bots, SaaS platforms, web apps, and payment channels.
+- JSON-RPC endpoint and idempotency support.
+- Developer-first payment-intent architecture.
+
+The business page links merchants to `https://app.stendly.com/b2b` for API keys and to `https://stendly.com/en-us/docs` for documentation.
+
+### Privacy Policy
+
+The privacy policy states that Stendly is a non-custodial software interface. It says Stendly does not act as a financial intermediary, does not hold user funds, and collects minimal personal data.
+
+Data described by the privacy policy:
+
+- Authentication data such as email address for account authentication and recovery.
+- On-chain data such as Solana wallet addresses and transaction hashes, which are public blockchain data.
+- Anonymous aggregated usage analytics through privacy-respecting analytics tools.
+- Merchant API logs for debugging and security, including API key hashes, timestamps, and request metadata.
+
+The policy says Stendly does not collect names, physical addresses, government IDs, private keys, seed phrases, PIN codes, or advertising tracking cookies, and does not sell, rent, or share personal data with third parties.
+
+The policy says personal data is encrypted at rest, authentication credentials are hashed and salted, and users may request account and personal-data deletion by contacting `support@stendly.com`.
+
+### Disclaimer
+
+The disclaimer states that Stendly provides non-custodial software tools for interacting with the Solana blockchain.
+
+Key disclaimer points:
+
+- Stendly is not a financial institution, payment processor, money transmitter, or custodian.
+- Stendly does not hold, transfer, escrow, or manage user funds.
+- Transactions occur directly on the Solana blockchain between involved parties.
+- Stendly is operated by individual developers and is not registered as a legal entity.
+- Cryptocurrency transactions are irreversible.
+- The Solana network may experience congestion, outages, or issues outside Stendly's control.
+- Cryptocurrency values can fluctuate significantly.
+- Users are responsible for securing PIN codes and credentials.
+- Stendly is provided as-is without warranties.
+- Stendly may integrate with or link to third-party services and is not responsible for those services.
+
+## Documentation Overview
+
+The documentation is hosted at `https://stendly.com/en-us/docs`. It describes Stendly as non-custodial payments on Solana and explains how to integrate USDC payments using SDKs and APIs.
+
+Documentation areas:
+
+- Getting started: account creation, wallet creation, environments, API keys, and first payment.
+- SDK quickstarts: Python, Node.js, .NET, and cURL.
+- API reference: payment intents, terminals, webhooks, merchant API, and errors.
+- Guides: payment flow, webhook security, error handling, and rate limiting.
+- Resources: FAQ, changelog, and support.
+
+## Getting Started
+
+### How Stendly Works
+
+Stendly enables a customer to send USDC directly to the merchant destination address with a payment-specific Solana reference. Stendly detects the referenced transfer and notifies the merchant application via webhook.
+
+The getting-started documentation says users need:
+
+- A Stendly Wallet, created when setting a PIN code.
+- A Stendly Account, registered through the dashboard.
+- USDC on Solana for devnet or mainnet testing.
+- API keys generated from the dashboard.
+
+### Create a Stendly Account
+
+Account setup consists of registration, email verification, KYB for business use, and dashboard access.
+
+The dashboard is used for merchant settings, API keys, payment intents, terminals, webhook configuration, and merchant statistics.
+
+### Create a Stendly Wallet
+
+The wallet guide explains wallet creation without seed phrases. Users create a Stendly wallet, verify the wallet, and can use devnet USDC for testing.
+
+Security notes from the wallet documentation:
+
+- The wallet is non-custodial.
+- Users own their keys.
+- Wallet protection is PIN based.
+- Users should not share authentication credentials.
+
+### API Keys
+
+API keys are generated and managed in the dashboard. The documentation describes key format and recommends secure storage.
+
+API key best practices:
+
+- Store API keys in environment variables or a secret manager.
+- Do not hardcode keys in source code.
+- Rotate keys if they may be exposed.
+- Use HTTPS in production.
+
+### Environments
+
+Stendly has two primary environments:
+
+- Mainnet for production.
+- Devnet for development and sandbox testing.
+
+SDKs can be configured explicitly for production or development.
+
+### First Payment
+
+The first-payment guide walks through installing an SDK, creating a payment intent, showing payment information to the customer, having the customer send USDC, and verifying payment through a webhook.
+
+## Payment Flow
+
+The payment flow is:
+
+1. The merchant backend creates a payment intent through an SDK or API and provides amount and order ID.
+2. The merchant frontend displays the destination address, exact amount, and payment reference, optionally as a QR code.
+3. The customer sends the exact USDC amount to the merchant destination address with the payment reference.
+4. Solana confirms the transaction and Stendly detects the payment on-chain.
+5. Stendly sends a `payment_intent.succeeded` webhook to the merchant endpoint.
+6. The merchant backend verifies the webhook signature and fulfills the order.
+
+Settlement is direct to the configured payout wallet, so there is no Stendly balance or manual withdrawal step.
+
+## API Reference
+
+Machine-readable contract:
+
+- [OpenAPI JSON](https://api.stendly.com/openapi.json)
+- [OpenAPI YAML](https://api.stendly.com/openapi.yaml)
+
+### Authentication
+
+Merchant API calls use bearer-token authentication with an API key:
+
+```http
+Authorization: Bearer $API_KEY
+```
+
+API keys should be stored securely and should not be committed to source control.
+
+### Payment Intents API
+
+Payment intents are the core object for accepting payments.
+
+Create a payment intent:
+
+```http
+POST /api/merchants/intents
+```
+
+Request parameters:
+
+- `amountCents`: required number, amount in cents.
+- `orderId`: required string, unique merchant order reference.
+- `terminalId`: optional string, terminal UUID for POS integration.
+
+The create response includes:
+
+- `id`
+- `orderId`
+- `expectedAmountCents`
+- `referenceAddress`
+- `destinationAddress`
+- `status`
+- `expiresAt`
+
+Retrieve a payment intent:
+
+```http
+GET /api/merchants/intents/{id}
+```
+
+Documented status transitions:
+
+```text
+PENDING -> PAID
+PENDING -> UNDERPAID -> PAID
+PENDING -> EXPIRED
+PENDING -> CANCELLED
+```
+
+### Terminals API
+
+The Terminals API supports POS terminal management.
+
+Create a terminal:
+
+```http
+POST /api/merchants/terminals
+```
+
+List terminals:
+
+```http
+GET /api/merchants/terminals
+```
+
+Terminals can be used to create payment intents associated with in-person or channel-specific payment locations.
+
+### Webhooks API
+
+The Webhooks API configures webhook URLs and supports signature verification.
+
+Update webhook URL:
+
+```http
+PUT /api/merchants/webhook
+```
+
+Stendly sends webhook events when payment state changes. Merchant backends should verify every webhook signature before fulfilling an order.
+
+### Merchant API
+
+The Merchant API exposes profile and stats endpoints.
+
+Get merchant profile:
+
+```http
+GET /api/merchants/profile
+```
+
+Get merchant stats:
+
+```http
+GET /api/merchants/stats
+```
+
+Merchant profile and stats are used by dashboards and integrations to inspect account state, payout configuration, payment metrics, and daily breakdowns.
+
+### API Errors
+
+The API error documentation describes:
+
+- Error response format.
+- HTTP status codes.
+- Error type reference.
+- Rate limiting.
+- SDK error handling.
+
+SDKs expose typed exceptions or typed error classes for authentication failures, validation errors, API connection errors, rate limits, signature verification failures, and general Stendly API errors.
+
+## Webhook Security
+
+Webhook security uses HMAC-SHA256 signatures.
+
+The webhook security guide explains:
+
+- Signature algorithm.
+- Verification process.
+- SDK verification helpers.
+- Replay attack prevention.
+- Best practices.
+
+Best practices:
+
+- Verify every webhook.
+- Use HTTPS endpoints.
+- Enforce timestamp tolerance to reduce replay risk.
+- Use the raw request body for signature verification.
+- Return successful HTTP responses only after processing or safely queuing the event.
+- Log request IDs and event IDs for debugging.
+
+## Rate Limiting
+
+The rate-limiting guide covers API limits, `Retry-After` headers, automatic retry behavior, manual rate-limit handling, exponential backoff, and best practices.
+
+Rate-limit guidance:
+
+- Use SDK retry behavior where available.
+- Respect `Retry-After` headers.
+- Use exponential backoff with jitter.
+- Avoid tight polling loops.
+- Prefer webhooks for payment completion.
+
+## Error Handling
+
+The error-handling guide explains typed exceptions and retry strategies for Python, Node.js, and .NET.
+
+General guidance:
+
+- Catch authentication and validation errors separately from transient errors.
+- Retry rate limits and connection failures using backoff.
+- Do not retry invalid requests without changing the request.
+- Log request IDs for debugging.
+- Avoid logging secrets, full API keys, webhook secrets, or private user data.
+
+## SDKs
+
+### Python SDK
+
+The Python SDK package is `stendly`.
+
+Installation:
+
+```bash
+pip install stendly
+```
+
+The Python SDK supports:
+
+- Sync and async clients.
+- Payment intents.
+- Terminals.
+- Webhooks.
+- Merchant profile and stats.
+- Typed exceptions.
+- Retry behavior.
+- Custom HTTP client configuration.
+- Integration examples for Flask, FastAPI, Telegram bots, Celery, Django, and AWS Lambda.
+
+Python SDK namespaces:
+
+- `client.intents`
+- `client.terminals`
+- `client.webhooks`
+- `client.merchant`
+
+Python best practices:
+
+- Close clients or use context managers.
+- Store API keys in environment variables or secret managers.
+- Verify every webhook.
+- Use idempotency for retries.
+- Prefer webhooks instead of polling.
+- Use HTTPS in production.
+- Redact secrets from logs.
+
+### Node.js SDK
+
+The Node.js SDK package is `@stendly/sdk`.
+
+Installation:
+
+```bash
+npm install @stendly/sdk
+```
+
+The Node.js SDK supports:
+
+- Payment intents.
+- Terminals.
+- Webhooks.
+- Merchant profile and stats.
+- TypeScript types.
+- Error classes.
+- Retry behavior.
+- Examples for Express.js, Next.js API routes, and AWS Lambda.
+
+Node.js SDK namespaces:
+
+- `client.intents`
+- `client.terminals`
+- `client.webhooks`
+- `client.merchant`
+
+### .NET SDK
+
+The .NET SDK package is `Stendly`.
+
+Installation:
+
+```bash
+dotnet add package Stendly
+```
+
+The .NET SDK supports:
+
+- `StendlyClient`
+- `IIntentsClient`
+- `ITerminalsClient`
+- `IWebhooksClient`
+- `IMerchantClient`
+- Models for payment intents, terminals, merchant profile, stats, and webhook events.
+- Typed exceptions.
+- ASP.NET Core integration examples.
+- Dependency injection registration guidance.
+
+### cURL and Raw HTTP
+
+The cURL examples document raw HTTP usage for:
+
+- Authentication.
+- Creating and retrieving payment intents.
+- Creating and listing terminals.
+- Updating webhook URL.
+- Getting merchant profile.
+- Getting merchant stats.
+
+These examples are useful for direct API testing from a terminal.
+
+## Core Concepts
+
+### Payment Intents
+
+A payment intent represents a merchant order and the expected USDC amount. It is created by a backend, displayed to a customer, detected on-chain after payment, and then completed through webhook-driven fulfillment.
+
+### Idempotency
+
+SDK documentation emphasizes idempotency for retries. A merchant should use the same order ID or idempotency key when retrying an operation after a timeout to avoid duplicate payment intents.
+
+### Terminals
+
+Terminals represent POS or channel-specific contexts. They can be created and listed by merchants and used when creating payment intents for in-person or channel-specific payments.
+
+### Webhooks
+
+Webhooks notify merchant systems about payment events. Webhook signatures must be verified before fulfillment.
+
+### Merchant Profile and Stats
+
+Merchant profile and stats endpoints expose account and performance data for integrations and dashboards. Stats include aggregate and daily metrics.
+
+## FAQ and Support
+
+The FAQ covers general Stendly behavior, payments, SDKs, webhooks, rate limits, and support.
+
+Support channels include documentation, email support, bug reports, feature requests, status page references, and security issue reporting.
+
+Security issues should be reported through the documented support/security channel rather than public issue threads when the issue is sensitive.
+
+## Changelog
+
+The documentation changelog tracks the current SDK releases:
+
+- Python SDK `stendly` version `0.2.1` on 2026-05-18.
+- Node.js SDK `@stendly/sdk` version `0.2.1` on 2026-05-18.
+- .NET SDK `Stendly` version `0.2.1` on 2026-05-18.
+
+## Public Links
+
+- [Website](https://stendly.com/)
+- [Business Gateway](https://stendly.com/en-us/b2b/)
+- [Documentation](https://stendly.com/en-us/docs/)
+- [Getting Started](https://stendly.com/en-us/docs/getting-started/)
+- [Python SDK](https://stendly.com/en-us/docs/sdk/python/)
+- [Node.js SDK](https://stendly.com/en-us/docs/sdk/node/)
+- [.NET SDK](https://stendly.com/en-us/docs/sdk/dotnet/)
+- [cURL API Examples](https://stendly.com/en-us/docs/sdk/curl/)
+- [Payment Intents API](https://stendly.com/en-us/docs/api-reference/intents/)
+- [Terminals API](https://stendly.com/en-us/docs/api-reference/terminals/)
+- [Webhooks API](https://stendly.com/en-us/docs/api-reference/webhooks/)
+- [Merchant API](https://stendly.com/en-us/docs/api-reference/merchant/)
+- [API Errors](https://stendly.com/en-us/docs/api-reference/errors/)
+- [Payment Flow Guide](https://stendly.com/en-us/docs/guides/payment-flow/)
+- [Webhook Security Guide](https://stendly.com/en-us/docs/guides/webhook-security/)
+- [Error Handling Guide](https://stendly.com/en-us/docs/guides/error-handling/)
+- [Rate Limiting Guide](https://stendly.com/en-us/docs/guides/rate-limiting/)
+- [FAQ](https://stendly.com/en-us/docs/resources/faq/)
+- [Changelog](https://stendly.com/en-us/docs/resources/changelog/)
+- [Support](https://stendly.com/en-us/docs/resources/support/)

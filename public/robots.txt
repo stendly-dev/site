@@ -1,0 +1,27 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://stendly.com/sitemap.xml
+Sitemap: https://stendly.com/en-us/docs/sitemap.xml
+
+# Disallow internal paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /checkout/
+Disallow: /_next/
+
+# Crawl delay
+Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /

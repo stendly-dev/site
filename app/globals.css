@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme inline {
+    --color-bg-main: var(--bg-main);
+    --color-bg-secondary: var(--bg-secondary);
+    --color-bg-elevated: var(--bg-elevated);
+    --color-text-main: var(--text-main);
+    --color-text-muted: var(--text-muted);
+    --color-border-subtle: var(--border-subtle);
+    --color-btn-primary-bg: var(--btn-primary-bg);
+    --color-btn-primary-text: var(--btn-primary-text);
+    --color-btn-primary-hover: var(--btn-primary-hover);
+    --color-btn-secondary-bg: var(--btn-secondary-bg);
+    --color-btn-secondary-text: var(--btn-secondary-text);
+    --color-btn-secondary-hover: var(--btn-secondary-hover);
+    --color-nav-bg: var(--nav-bg);
+    --color-toggle-bg: var(--toggle-bg);
+    --color-toggle-btn-text: var(--toggle-btn-text);
+    --color-toggle-btn-active-bg: var(--toggle-btn-active-bg);
+    --color-toggle-btn-active-text: var(--toggle-btn-active-text);
+    --color-success: var(--color-success);
+    --color-danger: var(--color-danger);
+    --color-warning: var(--color-warning);
+}
+
+:root {
+    --color-success: #00B894;
+    --color-danger: #FF6B6B;
+    --color-warning: #F59E0B;
+}
+
+/* ========================================== */
+/* LIGHT THEME (B2C - Personal)               */
+/* ========================================== */
+.theme-personal {
+    --bg-main: #FFFFFF;
+    --bg-secondary: #F8F9FA;
+    --bg-elevated: #FFFFFF;
+    --text-main: #0F172A;
+    --text-muted: #64748B;
+    --border-subtle: #E2E8F0;
+
+    --btn-primary-bg: #0F172A;
+    --btn-primary-text: #FFFFFF;
+    --btn-primary-hover: #334155;
+
+    --btn-secondary-bg: #F1F5F9;
+    --btn-secondary-text: #0F172A;
+    --btn-secondary-hover: #E2E8F0;
+
+    --nav-bg: rgba(255, 255, 255, 0.8);
+
+    --toggle-bg: #F1F5F9;
+    --toggle-btn-text: #64748B;
+    --toggle-btn-active-bg: #FFFFFF;
+    --toggle-btn-active-text: #0F172A;
+
+    --mockup-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================== */
+/* DARK THEME (B2B - Business)                */
+/* ========================================== */
+.theme-business {
+    --bg-main: #050507;
+    --bg-secondary: #0A0A0F;
+    --bg-elevated: #13131A;
+    --text-main: #FFFFFF;
+    --text-muted: #8888AA;
+    --border-subtle: rgba(255, 255, 255, 0.1);
+
+    --btn-primary-bg: #FFFFFF;
+    --btn-primary-text: #050507;
+    --btn-primary-hover: #E2E8F0;
+
+    --btn-secondary-bg: rgba(255, 255, 255, 0.05);
+    --btn-secondary-text: #FFFFFF;
+    --btn-secondary-hover: rgba(255, 255, 255, 0.1);
+
+    --nav-bg: rgba(5, 5, 7, 0.8);
+
+    --toggle-bg: #13131A;
+    --toggle-btn-text: #8888AA;
+    --toggle-btn-active-bg: #2A2A35;
+    --toggle-btn-active-text: #FFFFFF;
+
+    --mockup-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.theme-personal,
+.theme-business {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Toggle Switch */
+.toggle-bg {
+    background-color: var(--toggle-bg);
+    border: 1px solid var(--border-subtle);
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn {
+    color: var(--toggle-btn-text);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-btn.active {
+    background-color: var(--toggle-btn-active-bg);
+    color: var(--toggle-btn-active-text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left {
+    transform: translateX(-40px);
+}
+
+.reveal-right {
+    transform: translateX(40px);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.delay-200 {
+    transition-delay: 0.2s;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    scrollbar-width: none;
+}

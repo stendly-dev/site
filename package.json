@@ -1,0 +1,32 @@
+{
+  "name": "stendly-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/indexnow.mjs prepare && next build",
+    "start": "next start",
+    "audit:analytics": "node scripts/audit-analytics.mjs",
+    "verify:analytics": "node scripts/verify-analytics.mjs",
+    "check": "npm run build && npm run audit:analytics",
+    "indexnow:prepare": "node scripts/indexnow.mjs prepare",
+    "indexnow:submit": "node scripts/indexnow.mjs submit",
+    "utm:link": "node scripts/utm-link.mjs"
+  },
+  "dependencies": {
+    "@sentry/nextjs": "^10.42.0",
+    "next": "^16.2.4",
+    "posthog-js": "^1.390.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.0",
+    "@types/node": "^22",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "postcss": "^8.5",
+    "tailwindcss": "^4.2.0",
+    "typescript": "5.7.3"
+  }
+}

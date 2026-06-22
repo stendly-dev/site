@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Stendly blog payment alternatives">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#164e63"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <circle cx="420" cy="92" r="88" fill="#38bdf8" opacity="0.18"/>
+  <circle cx="92" cy="420" r="118" fill="#22c55e" opacity="0.12"/>
+  <text x="48" y="96" fill="#a5f3fc" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Stendly blog</text>
+  <text x="48" y="176" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="800">Payment</text>
+  <text x="48" y="224" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="800">alternatives</text>
+  <text x="48" y="296" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600">Merchant of record, cards, invoices, USDC</text>
+</svg>

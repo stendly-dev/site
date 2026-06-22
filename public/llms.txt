@@ -1,0 +1,53 @@
+# Stendly
+
+> Stendly is a non-custodial crypto wallet and USDC payment gateway on Solana. It provides a personal wallet, a business payment gateway, and SDK/API documentation for Python, Node.js, .NET, and raw HTTP integrations.
+
+Stendly is a software interface for direct Solana payments. It does not hold, transfer, escrow, or manage user funds. Merchants can accept USDC payments with 0% merchant fees, webhook notifications, payment intents, terminals, and API keys.
+
+## Website
+
+- [Stendly Personal Wallet](https://stendly.com/): Personal non-custodial wallet for sending, receiving, and paying with digital dollars on Solana.
+- [Stendly Business Gateway](https://stendly.com/en-us/b2b/): Business payment gateway for accepting USDC with instant settlement, zero chargebacks, and 0% merchant fees.
+- [Privacy Policy](https://stendly.com/en-us/privacy/): Data collection, security, rights, and contact information.
+- [Disclaimer](https://stendly.com/en-us/disclaimer/): Non-custodial software disclaimer, financial-service limitations, risk acknowledgment, warranties, liability, and third-party services.
+
+## Documentation
+
+- [Stendly Docs](https://stendly.com/en-us/docs/): Main documentation home for Stendly payments, SDKs, API reference, guides, and resources.
+- [Getting Started](https://stendly.com/en-us/docs/getting-started/): Overview of how Stendly works and the integration path.
+- [Create a Stendly Account](https://stendly.com/en-us/docs/getting-started/create-account/): Register, verify email, complete KYB, and access the dashboard.
+- [Create Your Stendly Wallet](https://stendly.com/en-us/docs/getting-started/create-wallet/): Wallet creation, verification, devnet USDC, and security notes.
+- [Generate API Keys](https://stendly.com/en-us/docs/getting-started/api-keys/): API key location, format, storage, and rotation guidance.
+- [Environments](https://stendly.com/en-us/docs/getting-started/environments/): Mainnet and devnet configuration.
+- [Your First Payment](https://stendly.com/en-us/docs/getting-started/first-payment/): End-to-end first payment flow using SDKs and webhooks.
+
+## SDKs and API
+
+- [OpenAPI JSON](https://api.stendly.com/openapi.json): Public Stendly Merchant API contract.
+- [OpenAPI YAML](https://api.stendly.com/openapi.yaml): YAML version of the same public API contract.
+- [Python SDK Reference](https://stendly.com/en-us/docs/sdk/python/): Python SDK installation, sync/async clients, namespaces, models, retry behavior, and examples.
+- [Node.js SDK Reference](https://stendly.com/en-us/docs/sdk/node/): Node.js SDK installation, client options, namespaces, types, error handling, and examples.
+- [.NET SDK Reference](https://stendly.com/en-us/docs/sdk/dotnet/): .NET SDK installation, client initialization, namespaces, models, DI, and examples.
+- [cURL API Examples](https://stendly.com/en-us/docs/sdk/curl/): Raw HTTP examples for Stendly endpoints.
+- [Payment Intents API](https://stendly.com/en-us/docs/api-reference/intents/): Create and retrieve payment intents.
+- [Terminals API](https://stendly.com/en-us/docs/api-reference/terminals/): Create and list POS terminals.
+- [Webhooks API](https://stendly.com/en-us/docs/api-reference/webhooks/): Configure webhook URLs and verify webhook signatures.
+- [Merchant API](https://stendly.com/en-us/docs/api-reference/merchant/): Retrieve merchant profile and stats.
+- [API Errors](https://stendly.com/en-us/docs/api-reference/errors/): Error response format, HTTP status codes, error types, rate limits, and SDK error handling.
+
+## Guides
+
+- [Payment Flow](https://stendly.com/en-us/docs/guides/payment-flow/): Intent creation, payment display, customer transfer, confirmation, webhook notification, order fulfillment, and settlement.
+- [Webhook Security](https://stendly.com/en-us/docs/guides/webhook-security/): HMAC-SHA256 signatures, verification, replay prevention, SDK verification, and best practices.
+- [Error Handling](https://stendly.com/en-us/docs/guides/error-handling/): Typed exceptions, retry strategies, and logging best practices.
+- [Rate Limiting](https://stendly.com/en-us/docs/guides/rate-limiting/): API limits, Retry-After headers, exponential backoff, and retry guidance.
+
+## Resources
+
+- [FAQ](https://stendly.com/en-us/docs/resources/faq/): Questions about Stendly payments, SDKs, webhooks, billing, rate limits, and support.
+- [Changelog](https://stendly.com/en-us/docs/resources/changelog/): Version history and release notes for Stendly SDKs.
+- [Support](https://stendly.com/en-us/docs/resources/support/): Support channels, bug reports, feature requests, status page, and security issues.
+
+## Full Context
+
+- [llms-full.txt](https://stendly.com/llms-full.txt): Expanded Markdown context compiled from the current Stendly website and documentation.

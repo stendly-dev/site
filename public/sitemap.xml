@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://stendly.com/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://stendly.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://stendly.com/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://stendly.com/ru-ru/personal/"/>
+        <xhtml:link rel="alternate" hreflang="ru-ru" href="https://stendly.com/ru-ru/personal/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://stendly.com/"/>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://stendly.com/en-us/b2b/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://stendly.com/en-us/b2b/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://stendly.com/en-us/b2b/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://stendly.com/ru-ru/b2b/"/>
+        <xhtml:link rel="alternate" hreflang="ru-ru" href="https://stendly.com/ru-ru/b2b/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://stendly.com/en-us/b2b/"/>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://stendly.com/ru-ru/personal/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://stendly.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://stendly.com/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://stendly.com/ru-ru/personal/"/>
+        <xhtml:link rel="alternate" hreflang="ru-ru" href="https://stendly.com/ru-ru/personal/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://stendly.com/"/>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://stendly.com/ru-ru/b2b/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://stendly.com/en-us/b2b/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://stendly.com/en-us/b2b/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://stendly.com/ru-ru/b2b/"/>
+        <xhtml:link rel="alternate" hreflang="ru-ru" href="https://stendly.com/ru-ru/b2b/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://stendly.com/en-us/b2b/"/>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://stendly.com/en-us/privacy/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://stendly.com/en-us/privacy/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://stendly.com/en-us/privacy/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://stendly.com/ru-ru/privacy/"/>
+        <xhtml:link rel="alternate" hreflang="ru-ru" href="https://stendly.com/ru-ru/privacy/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://stendly.com/en-us/disclaimer/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://stendly.com/en-us/disclaimer/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://stendly.com/en-us/disclaimer/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://stendly.com/ru-ru/disclaimer/"/>
+        <xhtml:link rel="alternate" hreflang="ru-ru" href="https://stendly.com/ru-ru/disclaimer/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://stendly.com/ru-ru/privacy/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://stendly.com/en-us/privacy/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://stendly.com/en-us/privacy/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://stendly.com/ru-ru/privacy/"/>
+        <xhtml:link rel="alternate" hreflang="ru-ru" href="https://stendly.com/ru-ru/privacy/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://stendly.com/ru-ru/disclaimer/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://stendly.com/en-us/disclaimer/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://stendly.com/en-us/disclaimer/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://stendly.com/ru-ru/disclaimer/"/>
+        <xhtml:link rel="alternate" hreflang="ru-ru" href="https://stendly.com/ru-ru/disclaimer/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+</urlset>
